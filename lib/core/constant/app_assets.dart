@@ -13,4 +13,5 @@ class AppAssets {
   static const String suraDetailsRight = "assets/images/sura_details_right.png";
   static const String suraDetailsLeft = "assets/images/sura_details_left.png";
   static const String historyImage = "assets/images/history_image_quran.png";
+  static const String hadethBg = "assets/images/hadeth_bg.png";
 }
