@@ -392,7 +392,6 @@ class _QuranScreenState extends State<QuranScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
