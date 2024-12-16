@@ -392,6 +392,7 @@ class _QuranScreenState extends State<QuranScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
@@ -446,8 +447,8 @@ class _QuranScreenState extends State<QuranScreen> {
                     color: AppColors.coffeeColor,
                   )),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: size.height * 0.01,
             ),
             if (ids.isNotEmpty)
               SizedBox(
@@ -465,8 +466,8 @@ class _QuranScreenState extends State<QuranScreen> {
                   },
                 ),
               ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: size.height * 0.01,
             ),
             const Text(
               "Suras List",
@@ -498,8 +499,8 @@ class _QuranScreenState extends State<QuranScreen> {
                         );
                 },
                 separatorBuilder: (context, index) {
-                  return const Divider(
-                    height: 20,
+                  return Divider(
+                    height: size.height * 0.03,
                     endIndent: 30,
                     indent: 30,
                   );

@@ -10,6 +10,7 @@ class HistoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     var theme = Theme.of(context);
     return InkWell(
       onTap: () {
@@ -17,7 +18,7 @@ class HistoryWidget extends StatelessWidget {
             arguments: suraData);
       },
       child: Container(
-        margin: const EdgeInsets.all(4),
+        margin: EdgeInsets.all(size.height * 0.01),
         decoration: BoxDecoration(
           color: theme.primaryColor,
           borderRadius: BorderRadius.circular(20),
@@ -48,8 +49,8 @@ class HistoryWidget extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              width: 10,
+            SizedBox(
+              width: 1.w(context),
             ),
             Image.asset(
               AppAssets.historyImage,
@@ -59,5 +60,17 @@ class HistoryWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+extension Size on num {
+  double h(BuildContext context) {
+    double number = this / 100;
+    return MediaQuery.of(context).size.height * number;
+  }
+
+  double w(BuildContext context) {
+    double number = this / 100;
+    return MediaQuery.of(context).size.width * number;
   }
 }
